@@ -1,0 +1,39 @@
+{
+  "name": "@themost/node",
+  "version": "2.5.0",
+  "description": "MOST Web Framework 2.0 - NodeJS Client",
+  "module": "dist/themost_node.cjs.js",
+  "main": "dist/themost_node.cjs.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jasmine",
+    "build": "rimraf dist && rollup -c ./rollup.config.js -m",
+    "watch": "rimraf dist && rollup -c ./rollup.config.js -m -w",
+    "prepublishOnly": "npm run build",
+    "tslint": "tslint --project ."
+  },
+  "peerDependencies": {
+    "@themost/client": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=6.9.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themost-framework/themost-client.git"
+  },
+  "author": "Kyriakos Barbounakis <k.barbounakis@gmail.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/themost-framework/themost-client/issues"
+  },
+  "homepage": "https://github.com/themost-framework/themost-client#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.5.0",
+    "@types/node": "^12.12.14",
+    "@types/node-fetch": "^2.5.4"
+  }
+}

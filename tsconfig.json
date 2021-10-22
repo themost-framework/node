@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "declarationDir": "dist",
+        "target": "es2015",
+        "module": "esnext",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "declaration": true,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "lib": [ "es2017", "dom" ],
+        "types": [
+            "node",
+            "jasmine"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "spec"
+    ]
+}
