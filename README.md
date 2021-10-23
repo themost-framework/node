@@ -12,7 +12,7 @@
 
 ![MOST Web Framework Logo](https://www.themost.io/assets/images/most_logo_sw_240.png)
 
-[MOST Web Framework 2.0 **Codename Blueshift**](https://github.com/themost-framework/themost) - NodeJS client module
+[MOST Web Framework](https://github.com/themost-framework/themost) - NodeJS client module
 
 ## Installation
 
