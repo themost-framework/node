@@ -1,7 +1,7 @@
 {
   "name": "@themost/node",
   "version": "2.5.0",
-  "description": "MOST Web Framework 2.0 - NodeJS Client",
+  "description": "MOST Web Framework NodeJS Client Module",
   "module": "dist/themost_node.esm.js",
   "main": "dist/themost_node.cjs.js",
   "types": "dist/index.d.ts",
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/themost-framework/themost-client.git"
+    "url": "git+https://github.com/themost-framework/node.git"
   },
-  "author": "Kyriakos Barbounakis <k.barbounakis@gmail.com>",
+  "author": "THEMOST LP <support@themost.io>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/themost-framework/themost-client/issues"
+    "url": "https://github.com/themost-framework/node/issues"
   },
-  "homepage": "https://github.com/themost-framework/themost-client#readme",
+  "homepage": "https://github.com/themost-framework/node#readme",
   "dependencies": {
     "node-fetch": "^2.6.0"
   },
