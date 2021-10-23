@@ -1,4 +1,15 @@
+# ide
 .DS_Store
+.theia
+.idea
+.vscode
+.devcontainer
+tslint.json
+
+# build
 node_modules
+rollup.config.js
+
+# test
 *.spec.ts
 spec

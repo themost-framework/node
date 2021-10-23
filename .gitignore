@@ -97,4 +97,10 @@ public/
 
 dist/
 
+# ide
+.vscode
+.theia
+.devcontainer
+.idea
+
 # End of https://www.gitignore.io/api/node
