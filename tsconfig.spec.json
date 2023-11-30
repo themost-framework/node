@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "declarationDir": "dist",
         "target": "es2015",
         "module": "commonjs",
@@ -18,6 +19,11 @@
             "node",
             "jasmine"
         ],
+        "paths": {
+            "@themost/node": [
+                "src/index"
+            ]
+        },
         "typeRoots": [
             "node_modules/@types"
         ]

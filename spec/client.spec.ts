@@ -1,4 +1,4 @@
-import {NodeDataContext, NodeDataService} from '../src';
+import {NodeDataContext, NodeDataService} from '@themost/node';
 import {EdmSchema} from '@themost/client';
 import {getApplication, serveApplication, getServerAddress, getToken} from '@themost/test';
 import {URL, URLSearchParams} from 'url';

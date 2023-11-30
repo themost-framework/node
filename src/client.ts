@@ -1,4 +1,4 @@
-// MOST Web Framework 2.0 Codename Blueshift Copyright (c) 2017-2021, THEMOST LP All rights reserved
+// MOST Web Framework 2.0 Codename Blueshift Copyright (c) 2017-2023, THEMOST LP All rights reserved
 import fetch from 'node-fetch';
 import {ClientDataContextOptions, ClientDataContext, ClientDataService, EdmSchema} from '@themost/client';
 import {Args, ResponseError} from '@themost/client';
