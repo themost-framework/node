@@ -1,6 +1,6 @@
-const typescript = require('rollup-plugin-typescript2');
+const typescript = require('@rollup/plugin-typescript');
 const dist = './dist/';
-const name = 'themost_node';
+const name = 'index';
 
 module.exports = [{
     input: './src/index.ts',
@@ -20,6 +20,8 @@ module.exports = [{
         '@themost/client'
     ],
     plugins: [
-        typescript()
+        typescript({
+            tsconfig: './tsconfig.json'
+        })
     ]
 }];

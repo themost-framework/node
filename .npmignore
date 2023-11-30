@@ -16,3 +16,6 @@ rollup.config.js
 # test
 *.spec.ts
 spec
+
+# gitpod
+.gitpod.yml
