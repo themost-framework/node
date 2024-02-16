@@ -1,25 +1,26 @@
-const typescript = require('rollup-plugin-typescript2');
-const dist = './dist/';
-const name = 'themost_node';
+import typescript from '@rollup/plugin-typescript';
+import * as pkg from './package.json';
 
-module.exports = [{
-    input: './src/index.ts',
-    output: [
-        {
-            file: `${dist}${name}.cjs.js`,
-            format: 'cjs'
+export default [
+    {
+        input: 'src/index.ts',
+        output: {
+            dir: 'dist',
+            format: 'cjs',
+            sourcemap: true
         },
-        {
-            file: `${dist}${name}.esm.js`,
-            format: 'esm'
-        }
-    ],
-    external: [
-        'url',
-        'node-fetch',
-        '@themost/client'
-    ],
-    plugins: [
-        typescript()
-    ]
-}];
+        external: Object.keys(pkg.dependencies).concat(Object.keys(pkg.peerDependencies)),
+        plugins: [typescript()]
+    },
+    {
+        input: 'src/index.ts',
+        output: {
+            file: 'dist/index.esm.js',
+            format: 'esm',
+            sourcemap: true
+        },
+        external: Object.keys(pkg.dependencies).concat(Object.keys(pkg.peerDependencies)),
+        plugins: [typescript(
+        )]
+    }
+];
