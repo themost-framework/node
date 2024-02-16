@@ -91,10 +91,18 @@ export class NodeDataService extends ClientDataService {
                         if (res.ok) {
                             return res.text();
                         } else {
+                            // get content type
+                            const contentType = res.headers.get('Content-Type');
+                            // validate that content type is json-like
+                            const isJson = contentType.startsWith('application/json') || contentType.startsWith('application/ld+json');
+                            // if not throw response error with status and status text
+                            if (isJson === false) {
+                                return Promise.reject(new ResponseError(res.statusText, res.status));
+                            }
                             return res.json().then( (body) => {
                                 const err = (Object as any).assign(new ResponseError(body.message || res.statusText, res.status), body);
                                 // tslint:enable max-line-length
-                                if (err.hasOwnProperty('status')) {
+                                if (Object.prototype.hasOwnProperty.call(err, 'status')) {
                                     // delete status because of ResponseError.statusCode property
                                     delete err.status;
                                 }
@@ -104,6 +112,8 @@ export class NodeDataService extends ClientDataService {
                     })
                     .then( (body) => {
                         return JSON.parse(body, dateParser);
+                    }).catch((err) => {
+                        return Promise.reject(err);
                     });
             } catch (err) {
                 return Promise.reject(err);
