@@ -4,7 +4,7 @@ import {ClientDataContextOptions, ClientDataContext, ClientDataService, EdmSchem
 import {Args, ResponseError} from '@themost/client';
 import {URL, URLSearchParams} from 'url';
 // tslint:disable max-line-length
-const REG_DATETIME_ISO = /^(\d{4})(?:-?W(\d+)(?:-?(\d+)D?)?|(?:-(\d+))?-(\d+))(?:[T ](\d+):(\d+)(?::(\d+)(?:\.(\d+))?)?)?(?:Z(-?\d*))?([+-](\d+):(\d+))?$/;
+const REG_DATETIME_ISO = /^\d{4}-([0]\d|1[0-2])-([0-2]\d|3[01])(?:[T ](\d+):(\d+)(?::(\d+)(?:\.(\d+))?)?)(?:Z(-?\d*))?([+-](\d+):(\d+))?$/;
 // tslint:enable max-line-length
 function dateParser(key, value) {
     if ((typeof value === 'string') && REG_DATETIME_ISO.test(value)) {
